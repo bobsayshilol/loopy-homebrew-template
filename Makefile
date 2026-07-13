@@ -44,6 +44,8 @@ LDSCRIPT = ./tools/loopy.ld
 # Source/object lists
 SRCS_C = $(wildcard $(SRCDIR)/*.c)
 OBJS_C = $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRCS_C))
+SRCS_CXX = $(wildcard $(SRCDIR)/*.cpp)
+OBJS_CXX = $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS_CXX))
 SRCS_S = $(wildcard $(SRCDIR)/*.s)
 OBJS_S = $(patsubst $(SRCDIR)/%.s,$(OBJDIR)/%.o,$(SRCS_S))
 
@@ -75,7 +77,7 @@ rom: $(ROM)
 	$(OBJ) -O binary $< $@
 	$(FIXROM) $(ROM)
 
-$(ROM:.bin=.elf): $(OBJS_S) $(OBJS_C)
+$(ROM:.bin=.elf): $(OBJS_S) $(OBJS_C) $(OBJS_CXX)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.s | $(OBJDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
