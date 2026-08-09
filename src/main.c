@@ -86,7 +86,7 @@ int main() {
 
 	// Play some music
 	biosvar_autoSoundState = &soundState;
-	bios_playBgm(&soundState, 0x80, 0, &data_musicTrackList);
+	bios_playBgm(&soundState, 0x80, 0, data_musicTrackList);
 
 	// Every frame, move the BM0 layer according to gamepad/mouse
 	while(1) {
