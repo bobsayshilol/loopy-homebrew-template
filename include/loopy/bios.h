@@ -37,14 +37,14 @@ extern void     bios_soundVolume(int channel, int volume);
 extern void     bios_soundToggleDemo();
 
 // Fast math functions
-extern uint16_t bios_colorInverseGray(uint16_t);
-extern uint8_t  bios_valueBlendQuarter(uint8_t, uint8_t);
-extern uint16_t bios_colorBlendQuarter(uint16_t, uint16_t);
-extern int32_t  bios_mathMulS16(int16_t, int16_t);
-extern uint32_t bios_mathMulU16(uint16_t, uint16_t);
-extern uint16_t bios_mathDivU16(uint16_t, uint16_t);
-extern int16_t  bios_mathDivS16(int16_t, int16_t);
-extern int32_t  bios_mathDivS32(int32_t, int32_t);
+extern uint16_t bios_colorInverseGray(uint16_t) __attribute__((const));
+extern uint8_t  bios_valueBlendQuarter(uint8_t, uint8_t) __attribute__((const));
+extern uint16_t bios_colorBlendQuarter(uint16_t, uint16_t) __attribute__((const));
+extern int32_t  bios_mathMulS16(int16_t, int16_t) __attribute__((const));
+extern uint32_t bios_mathMulU16(uint16_t, uint16_t) __attribute__((const));
+extern uint16_t bios_mathDivU16(uint16_t, uint16_t) __attribute__((const));
+extern int16_t  bios_mathDivS16(int16_t, int16_t) __attribute__((const));
+extern int32_t  bios_mathDivS32(int32_t, int32_t) __attribute__((const));
 
 // Printing
 extern uint8_t  bios_printParts(uint8_t**, uint16_t**, uint32_t*, UNK_P, UNK_P, uint8_t*, uint8_t, bool);
