@@ -25,7 +25,7 @@ _bios_soundToggleDemo = 0x6B86;
 /* Fast math functions */
 _bios_colorInverseGray = 0x2D68;
 _bios_valueBlendQuarter = 0x2DC6;
-_bios_colorBlendQuarter = 0x2DE0;
+_bios_colorBlendQuarter = 0x2DE4;
 _bios_mathMulS16 = 0x2E68;
 _bios_mathMulU16 = 0x2E72;
 _bios_mathDivU16 = 0x2E7C;
